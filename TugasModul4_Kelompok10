@@ -1,1 +1,107 @@
+package com.example;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.util.Scanner;
 
+//Muhammad Abdul Hayyu         21120121140140
+//Rifqy Fahranda Putra         21120121140102
+//Ratstsan Nur Akmal Adiwijaya 21120121120019
+//Rendy Hartono Putra          21120121130071
+
+public class TugasModul4 {
+    static String cetak2(String text){
+        return text;
+    }
+
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        DecimalFormat Biaya = (DecimalFormat) DecimalFormat.getCurrencyInstance();
+        DecimalFormatSymbols formatRp = new DecimalFormatSymbols();
+
+        int jum=0, i=0;
+        double total_bayar=0;
+
+        int [] kode = new int[6];
+        int [] Jumlah = new int[6];
+        int [] harga = new int[6];
+        double [] sub_total = new double[6];
+        String [] barang = new String[6];
+
+        System.out.println("Selamat Datang di konter HP Sejahtera");
+        System.out.println("");
+
+        listbarang objek = new listbarang();
+
+        objek.List();
+
+        System.out.println("");
+
+        System.out.print("Masukan Jumlah barang yang ingin anda beli  : ");
+        jum=input.nextInt();
+
+        System.out.println("1.Kabel Charger\n"+"2.Earphone\n"+"3.Power Bank\n"+"4.Tripod Kamera\n"+"5.Casing\n"+"6.Kartu Perdana\n");
+        for (i=0; i<jum;i++){
+            System.out.print("Masukan Kode Barang Ke-"+(i+1)+" : ");
+            kode[i]=input.nextInt();
+            System.out.print("Masukan Jumlah barang ke-"+(i+1)+" : ");
+            Jumlah[i]=input.nextInt();
+
+
+
+            switch (kode[i]){
+                case 1 :
+                    barang[i]="Kabel Charger";
+                    harga[i]=30000;
+
+                    break;
+                case 2 :
+                    barang[i]="Earphone     ";
+                    harga[i]=100000;
+
+                    break;
+                case 3 :
+                    barang[i]="Power Bank   ";
+                    harga[i]=150000;
+
+                    break;
+                case 4 :
+                    barang[i]="Tripod Kamera";
+                    harga[i]=75000;
+
+                    break;
+                case 5 :
+                    barang[i]="Casing       ";
+                    harga[i]=70000;
+
+                    break;
+                case 6 :
+                    barang[i]="Kartu Perdana";
+                    harga[i]=50000;
+
+                    break;
+                default :
+                    System.out.println("Kode Barang Tidak Tersedia");
+            }
+        }
+
+        formatRp.setCurrencySymbol("Rp. ");
+        formatRp.setMonetaryDecimalSeparator('.');
+        formatRp.setGroupingSeparator(',');
+        Biaya.setDecimalFormatSymbols(formatRp);
+
+        System.out.println(" ");
+        System.out.println("No    Nama Barang        Harga        Jumlah     Sub Total");
+
+        for (i=0; i<jum;i++){
+            sub_total[i]=((Jumlah[i]*harga[i]));
+            total_bayar+=sub_total[i];
+            System.out.println(i+1+"    "+barang[i]+"   "+Biaya.format(harga[i])+"     "+Jumlah[i]+"      "+Biaya.format(sub_total[i]));
+        }
+        System.out.println(" ");
+
+        System.out.println("Total Bayar : "+Biaya.format(total_bayar));
+
+        System.out.println(cetak2("Terima Kasih telah berbelanja di Konter HP Sejahtera"));
+    }
+}
