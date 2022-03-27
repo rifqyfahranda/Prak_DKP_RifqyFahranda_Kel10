@@ -93,15 +93,3 @@ public class TugasModul4 {
         System.out.println(" ");
         System.out.println("No    Nama Barang        Harga        Jumlah     Sub Total");
 
-        for (i=0; i<jum;i++){
-            sub_total[i]=((Jumlah[i]*harga[i]));
-            total_bayar+=sub_total[i];
-            System.out.println(i+1+"    "+barang[i]+"   "+Biaya.format(harga[i])+"     "+Jumlah[i]+"      "+Biaya.format(sub_total[i]));
-        }
-        System.out.println(" ");
-
-        System.out.println("Total Bayar : "+Biaya.format(total_bayar));
-
-        System.out.println(cetak2("Terima Kasih telah berbelanja di Konter HP Sejahtera"));
-    }
-}
