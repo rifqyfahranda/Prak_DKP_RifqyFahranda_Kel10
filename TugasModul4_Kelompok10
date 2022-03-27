@@ -102,6 +102,6 @@ public class TugasModul4 {
 
         System.out.println("Total Bayar : "+Biaya.format(total_bayar));
 
-        System.out.println(cetak2("Terima Kasih telah berbelanja di Konter HP Sejahtera"));
+        System.out.println(cetak2("Terima kasih telah berbelanja di Konter HP Sejahtera"));
     }
 }
