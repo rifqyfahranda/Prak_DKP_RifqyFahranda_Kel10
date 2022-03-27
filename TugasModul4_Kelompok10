@@ -9,7 +9,7 @@ import java.util.Scanner;
 //Rendy Hartono Putra          21120121130071
 
 public class TugasModul4 {
-    static String cetak2(String text){
+   static String Salam(String text){
         return text;
     }
 
@@ -101,7 +101,8 @@ public class TugasModul4 {
         System.out.println(" ");
 
         System.out.println("Total Bayar : "+Biaya.format(total_bayar));
+        System.out.println("---------------");
 
-        System.out.println(cetak2("Terima kasih telah berbelanja di Konter HP Sejahtera"));
+       System.out.println(Salam("Terima Kasih telah berbelanja di Konter HP Sejahtera"));
     }
 }
