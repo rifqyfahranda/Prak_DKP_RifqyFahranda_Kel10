@@ -2,7 +2,7 @@ package com.example;
 
 public class listbarang {
     public void List (){
-        System.out.println("List Barang");
+        System.out.println("List Barang :");
         System.out.println("--------------");
         System.out.print("Kabel Charger   Rp.30000\n"+"Earphone        Rp.100000\n");
         System.out.print("Power Bank      Rp.150000\n"+"Tripod Kamera   Rp.75000\n"+"Casing          Rp.70000\n"+"Kartu Perdana   Rp.50000\n");
